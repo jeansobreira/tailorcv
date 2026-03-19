@@ -1,0 +1,99 @@
+perfil:
+  nome: Ana Lima
+  titulo: Engenheira de Software Backend
+  localizacao: São Paulo – SP, Brasil
+  email: ana.lima@email.com
+  linkedin: linkedin.com/in/ana-lima-dev
+  telefone: 11-98765-4321
+
+habilidades_tecnicas:
+  - categoria: Linguagens
+    itens: [Python, Go, TypeScript, SQL]
+  - categoria: Frameworks e APIs
+    itens: [FastAPI, Django, gRPC, REST]
+  - categoria: Bancos de Dados
+    itens: [PostgreSQL, Redis, MongoDB, BigQuery]
+  - categoria: Infraestrutura e Cloud
+    itens: [AWS, Terraform, Docker, Kubernetes]
+  - categoria: Mensageria e Streaming
+    itens: [Kafka, RabbitMQ, Pub/Sub]
+  - categoria: Observabilidade
+    itens: [Datadog, Prometheus, Grafana, OpenTelemetry]
+  - categoria: Metodologias
+    itens: [TDD, Clean Architecture, DDD, CI/CD, Agile, Scrum]
+
+capacidades_modelagem:
+  - problema: Design de APIs de alta performance
+    abordagens: [REST, gRPC, event sourcing, CQRS]
+    aplicacoes: [pagamentos em tempo real, rastreamento de entregas, auditoria de transações]
+
+  - problema: Migração e modernização de sistemas
+    abordagens: [decomposição de monolito, strangler fig, microsserviços]
+    aplicacoes: [migração de Django para Go/FastAPI, redução de latência e custo]
+
+  - problema: Observabilidade e confiabilidade
+    abordagens: [distributed tracing, métricas, alertas, SLOs]
+    aplicacoes: [monitoramento de sistemas financeiros, detecção de anomalias em produção]
+
+  - problema: Otimização de infraestrutura
+    abordagens: [rightsizing, autoscaling, IaC com Terraform]
+    aplicacoes: [redução de custos AWS, ambientes reproduzíveis com Kubernetes]
+
+competencias_chave:
+  - Design e implementação de microsserviços de alta disponibilidade
+  - Modelagem de dados e otimização de queries em bancos relacionais
+  - Revisão de código e mentoria de desenvolvedores júnior
+  - Tradução de requisitos de negócio em soluções técnicas escaláveis
+
+soft_skills:
+  - Comunicação clara em ambientes multidisciplinares
+  - Autonomia e senso de ownership sobre entregas
+  - Facilidade para colaboração em times distribuídos
+
+idiomas:
+  - idioma: Português
+    nivel: Nativo
+  - idioma: Inglês
+    nivel: Avançado (C1)
+  - idioma: Espanhol
+    nivel: Básico
+
+educacao:
+  - curso: Bacharelado em Ciência da Computação
+    instituicao: Universidade de São Paulo (USP)
+    ano: 2018
+  - curso: AWS Certified Solutions Architect – Associate
+    instituicao: Amazon Web Services
+    ano: 2022
+  - curso: CKA – Certified Kubernetes Administrator
+    instituicao: Cloud Native Computing Foundation
+    ano: 2023
+
+experiencia:
+  - cargo: Engenheira de Software Sênior
+    empresa: Fintech XYZ
+    periodo: "jan/2022 – presente"
+    setor: Serviços Financeiros
+    destaques:
+      - Redesenhei a camada de pagamentos, reduzindo latência média de 320ms para 45ms
+      - Implementei event sourcing com Kafka para auditoria de transações em tempo real
+      - Liderei tecnicamente um squad de 6 pessoas em ciclos de 2 semanas
+      - Reduzi 40% no custo de infraestrutura via rightsizing de instâncias AWS
+
+  - cargo: Engenheira de Software Plena
+    empresa: Startup Logtech
+    periodo: "mar/2019 – dez/2021"
+    setor: Logística
+    destaques:
+      - Desenvolvi API de rastreamento de entregas com 500k requisições/dia
+      - Migrei monolito Django para microsserviços em Go e FastAPI
+      - Implementei testes automatizados que elevaram cobertura de 12% para 87%
+      - Integrei APIs de transportadoras nacionais e internacionais
+
+  - cargo: Desenvolvedora Júnior
+    empresa: Agência Digital ABC
+    periodo: "jul/2018 – fev/2019"
+    setor: Marketing Digital
+    destaques:
+      - Desenvolvi e mantive APIs REST para plataformas de e-commerce
+      - Automatizei relatórios de campanha via scripts Python e Google Sheets API

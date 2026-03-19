@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TailorCV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <script>
+    // Default: dark. Only switch if user explicitly chose light before.
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  </script>
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="grain-bg"></div>
+  <div class="grid-bg"></div>
+  <div class="vignette"></div>
+
+  <!-- App shell -->
+  <div class="app-shell glass-panel">
+
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <span class="brand-name">Tailor<span class="grad-text">CV</span></span>
+      </div>
+      <button id="btn-theme" class="icon-btn" title="Alternar tema" aria-label="Alternar tema">
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☽</span>
+      </button>
+    </header>
+
+    <!-- Main layout -->
+    <main class="layout">
+
+      <!-- Left panel -->
+      <section class="panel-left">
+        <div class="field-group">
+          <label for="job-description">Descrição da vaga</label>
+          <textarea id="job-description" placeholder="Cole a descrição da vaga aqui..."></textarea>
+        </div>
+
+        <button id="btn-generate" class="btn-primary">
+          <span class="btn-label">Gerar currículo</span>
+          <span class="btn-loading" hidden>Gerando…</span>
+        </button>
+
+        <div class="field-group field-group--grow">
+          <label for="tex-content">LaTeX gerado <span class="label-hint">(editável)</span></label>
+          <textarea id="tex-content" placeholder="O LaTeX gerado aparecerá aqui…"></textarea>
+        </div>
+
+        <div class="btn-row">
+          <button id="btn-recompile" class="btn-ghost" disabled>Recompilar</button>
+          <button id="btn-download" class="btn-ghost" disabled>Download PDF</button>
+        </div>
+
+        <div id="status" class="status" aria-live="polite"></div>
+      </section>
+
+      <!-- Right panel: PDF preview -->
+      <section class="panel-right">
+        <iframe id="preview" title="Pré-visualização do currículo"></iframe>
+      </section>
+
+    </main>
+  </div><!-- /app-shell -->
+
+  <script src="/static/app.js" type="module"></script>
+</body>
+</html>

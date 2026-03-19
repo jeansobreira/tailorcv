@@ -1,0 +1,129 @@
+% ═══════════════════════════════════════════════════════════════
+%  cv_template.tex — Template TailorCV
+%
+%  NUNCA edite este arquivo para mudar conteúdo.
+%  O conteúdo vem de cv_content.tex, gerado pelo Python.
+%  Edite aqui apenas para mudar layout, cores ou estilos.
+% ═══════════════════════════════════════════════════════════════
+
+\documentclass[10pt]{article}
+
+% ── Pacotes ──────────────────────────────────────────────────────────────────
+% \usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[
+  a4paper,
+  top=50pt,
+  bottom=50pt,
+  left=41.8pt,
+  right=41.8pt
+]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{tikz}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ── Cores (idênticas ao template original) ───────────────────────────────────
+\definecolor{preto}{rgb}{0, 0, 0}
+\definecolor{azul}{rgb}{0.062745, 0.392157, 1}
+\definecolor{cinza}{rgb}{0.25098, 0.25098, 0.25098}
+
+% ── Comandos de layout ───────────────────────────────────────────────────────
+
+% Cabeçalho de seção — azul, 12pt bold
+\newcommand{\cvsecao}[1]{%
+  \vspace{10pt}%
+  {\color{azul}\fontsize{12}{14}\selectfont\textbf{#1}}\par%
+  \vspace{3pt}%
+}
+
+% Entrada de experiência — cargo, empresa, período
+\newcommand{\cvemprego}[3]{%
+  \vspace{6pt}%
+  {\color{cinza}\fontsize{10}{12}\selectfont #1 – #2 (#3)}\par%
+}
+
+% Subcabeçalho de habilidades (ex: "Linguagens e Bibliotecas")
+\newcommand{\cvcategoria}[1]{%
+  \vspace{8pt}%
+  {\color{cinza}\fontsize{10}{12}\selectfont\textsc{#1}}\par%
+}
+
+% Ambiente de bullets padrão
+\newenvironment{cvbullets}{%
+  \begin{itemize}[
+    leftmargin=1.5em,
+    itemsep=1pt,
+    topsep=3pt,
+    parsep=0pt,
+    label={\color{cinza}$\bullet$}
+  ]%
+  \color{cinza}\fontsize{10}{12}\selectfont%
+}{%
+  \end{itemize}%
+}
+
+% ── Conteúdo gerado pelo Python ──────────────────────────────────────────────
+%
+%  cv_content.tex define os seguintes comandos:
+%    \cvNome         \cvTitulo
+%    \cvEmail        \cvLinkedin    \cvTelefone    \cvLocalizacao
+%    \cvResumo
+%    \cvExperiencia  \cvEducacao
+%    \cvHabilidades  \cvIdiomas
+%
+\input{cv_content.tex}
+
+% ── Documento ────────────────────────────────────────────────────────────────
+\begin{document}
+
+% Cabeçalho — nome e título centralizados
+\begin{center}
+  {\color{preto}\fontsize{16}{20}\selectfont\textbf{\cvNome}}\par
+  \vspace{3pt}
+  {\color{preto}\fontsize{10}{12}\selectfont\cvTitulo}\par
+\end{center}
+
+\vspace{6pt}
+
+% Dados pessoais
+\cvsecao{DADOS PESSOAIS E CONTATO}
+{\color{cinza}\fontsize{10}{12}\selectfont
+  \cvEmail\par
+  \cvLinkedin\par
+}
+\vspace{4pt}
+{\color{cinza}\fontsize{10}{12}\selectfont
+  \cvTelefone\par
+  \cvLocalizacao\par
+}
+
+% Resumo
+\cvsecao{RESUMO}
+{\color{cinza}\fontsize{10}{12}\selectfont\cvResumo\par}
+
+% Experiência profissional
+\cvsecao{EXPERIÊNCIA DE TRABALHO}
+\cvExperiencia
+
+% Educação
+\cvsecao{EDUCAÇÃO}
+\cvEducacao
+
+\vspace{12pt}
+
+% Habilidades técnicas
+\cvsecao{HABILIDADES TÉCNICAS}
+\cvHabilidades
+
+% Idiomas
+\cvsecao{IDIOMAS}
+{\color{cinza}\fontsize{10}{12}\selectfont\cvIdiomas}
+
+\end{document}

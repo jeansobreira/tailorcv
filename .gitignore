@@ -1,0 +1,37 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+dist/
+*.egg-info/
+
+# uv
+uv.lock
+
+# Environment
+.env
+
+# Node
+node_modules/
+package-lock.json
+
+# Cache
+.pytest_cache/
+
+# Claude Code
+.claude/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# OS
+.DS_Store
+
+# Skills
+skills.yaml

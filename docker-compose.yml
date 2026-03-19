@@ -1,0 +1,10 @@
+services:
+  tailorcv:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./skills.yaml:/app/skills.yaml:ro
+      - ./cv_template.tex:/app/cv_template.tex:ro
